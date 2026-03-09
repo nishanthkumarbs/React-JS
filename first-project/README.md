@@ -104,7 +104,7 @@ Updating missing or changed nodes in the DOM is called **Patching**.
 ---
 
 # 📂 React Project Folder Structure
-
+```
 Project
 │
 ├── node_modules
@@ -119,8 +119,8 @@ Project
 ├── package-lock.json
 │
 └── index.html
-
-
+```
+---
 
 ### Important Files
 
@@ -149,6 +149,8 @@ React DOM is responsible for **rendering React components to the browser's UI (D
 import ReactDOM from "react-dom/client";
 
 ```
+---
+
 ### 🔧 Important Methods
 
 #### createRoot()
@@ -205,6 +207,7 @@ createRoot(document.getElementById("root")).render(
 );
 
 ```
+---
 
 ### 📦 Installing Node Modules
 
