@@ -105,8 +105,6 @@ Updating missing or changed nodes in the DOM is called **Patching**.
 
 # 📂 React Project Folder Structure
 
----
-
 Project
 │
 ├── node_modules
@@ -122,7 +120,6 @@ Project
 │
 └── index.html
 
----
 
 
 ### Important Files
