@@ -1,0 +1,29 @@
+import { useContext } from "react"
+import CourseContext from "./CourseContext"
+
+const Swathi=()=>{
+
+    let pythoncourse=useContext(CourseContext)
+    console.log(pythoncourse.python);
+    
+    return(
+        <div>
+            <h1>SwathiKhot</h1>
+            <h1>Python Full Stack Course Details</h1>
+         {
+            pythoncourse.python.map((item)=>{
+                console.log(item);
+                return(
+                    <li>
+                        {item}
+                    </li>
+                )
+                
+            })
+         }
+       
+       
+        </div>
+    )
+}
+export default Swathi;
