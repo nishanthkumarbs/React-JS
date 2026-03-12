@@ -1,0 +1,37 @@
+[
+    {
+        "stdid": 101,
+        "stdname": "Nishanth",
+        "stdaddress": "Mysore",
+        "stdphone": 98765098765,
+        "img":"https://upload.wikimedia.org/wikipedia/commons/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg"
+    },
+    {
+        "stdid": 102,
+        "stdname": "Rithin",
+        "stdaddress": "Mysore",
+        "stdphone": 98765098763,
+        "img":"https://cdn.britannica.com/25/222725-050-170F622A/Indian-cricketer-Mahendra-Singh-Dhoni-2011.jpg"
+    },
+    {
+        "stdid": 103,
+        "stdname": "Dhanush",
+        "stdaddress": "Mandya",
+        "stdphone": 98765098765,
+        "img":"https://upload.wikimedia.org/wikipedia/commons/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg"
+    },
+    {
+        "stdid": 104,
+        "stdname": "Nikhil",
+        "stdaddress": "Bangalore",
+        "stdphone": 98765098765,
+        "img":"https://upload.wikimedia.org/wikipedia/commons/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg"
+    },
+    {
+        "stdid": 105,
+        "stdname": "Darshan",
+        "stdaddress": "Coorg",
+        "stdphone": 98765098765,
+        "img":"https://upload.wikimedia.org/wikipedia/commons/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg"
+    }
+]
