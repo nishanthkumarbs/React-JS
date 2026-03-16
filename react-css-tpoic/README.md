@@ -1,16 +1,112 @@
-# React + Vite
+# 🎨 React CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 What is React CSS?
 
-Currently, two official plugins are available:
+- **React CSS** is used to apply **styling effects to web pages**.
+- **CSS (Cascading Style Sheets)** is used to add **colors, layout, and visual effects** to web pages.
+- CSS was introduced by **Håkon Wium Lie**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# 🧩 Ways to Add CSS in React
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In React, CSS can be applied in **three different ways**:
 
-## Expanding the ESLint configuration
+## 1️⃣ Inline CSS
+CSS is applied **directly inside JSX elements** using the `style` attribute.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```jsx
+function App() {
+  return (
+    <h1 style={{ color: "blue", textAlign: "center" }}>
+      Hello React
+    </h1>
+  );
+}
+
+export default App;
+```
+---
+
+## 2️⃣ Global CSS
+
+CSS is written in a **separate `.css` file** and imported into the component.
+
+### Example
+
+#### global.css
+```css
+h1 {
+  color: red;
+  text-align: center;
+}
+
+```
+---
+
+### App.jsx
+
+```jsx
+import "./global.css";
+
+function App() {
+  return <h1>Hello React</h1>;
+}
+
+export default App;
+```
+
+---
+
+# 🎨 CSS Frameworks Used in React
+
+CSS frameworks provide **pre-built components and styling utilities** that help developers build UI faster and maintain consistency.
+
+## 🔹 Popular CSS Frameworks
+
+### 1️⃣ Material UI
+- A popular React UI framework that follows **Google’s Material Design** guidelines.
+- Provides ready-to-use **React components** like buttons, cards, dialogs, and forms.
+
+Example installation:
+
+```bash
+npm install @mui/material @emotion/react @emotion/styled
+```
+---
+
+### 2️⃣ Bootstrap
+
+- One of the most widely used **CSS frameworks**.
+- Provides **responsive layouts, components, and utility classes**.
+
+#### Example Installation
+
+```bash
+npm install bootstrap
+```
+
+#### Import Bootstrap in your project
+
+```jsx
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+---
+
+### 3️⃣ Tailwind CSS
+
+- A **utility-first CSS framework** used for rapidly building custom UI.
+- Instead of predefined components, it provides **utility classes**.
+
+#### Example Installation
+
+```bash
+npm install -D tailwindcss
+```
+#### Example Usage
+
+```html
+<h1 class="text-blue-500 text-center text-2xl">
+  Hello Tailwind
+</h1>
+```
