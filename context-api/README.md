@@ -1,16 +1,67 @@
-# React + Vite
+# 🌐 React Context API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 What is Context API?
 
-Currently, two official plugins are available:
+- **Context API** is a feature in React used to **share data between components**.
+- It allows components to **access data directly without passing props through intermediate components**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Definition
+**Context API** is a method of **sharing data between components without using intermediate components**.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Why Context API?
 
-## Expanding the ESLint configuration
+Context API helps to **avoid Props Drilling**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Instead of passing data through many components like this:
+
+App → Parent → Child → GrandChild
+
+
+We can use **Context API** so components can access the data directly.
+
+---
+
+## 🔹 Basic Steps to Use Context API
+
+1. **Create Context**
+2. **Provide Context**
+3. **Consume Context**
+
+---
+
+## 🧩 Example
+
+### Create Context
+```jsx
+import { createContext } from "react";
+
+export const UserContext = createContext();
+
+```
+
+---
+
+### Provide Context
+
+```jsx
+<UserContext.Provider value="Nishanth">
+  <Child />
+</UserContext.Provider>
+```
+
+---
+
+### Consume Context
+
+```jsx
+import { useContext } from "react";
+import { UserContext } from "./UserContext";
+
+function Child() {
+  const user = useContext(UserContext);
+
+  return <h1>{user}</h1>;
+}
+```
