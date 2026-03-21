@@ -1,16 +1,57 @@
-# React + Vite
+# 🔗 React Refs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 What are Refs?
 
-Currently, two official plugins are available:
+- **Refs** stand for **references**.
+- Refs are used to **access or target a specific DOM element**.
+- They directly interact with the **Real DOM**.
+- Refs are available in **Class-Based Components (CBC)**.
+- In **Function-Based Components (FBC)**, we use the **`useRef()` Hook**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# 🔹 Steps to Use Refs in FBC
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Import the `useRef()` hook**
+2. **Store `useRef()` in a variable**
+3. **Pass the `ref` attribute to a DOM element**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 Example
+
+```jsx
+import React, { useRef } from "react";
+
+function InputFocus() {
+  const inputRef = useRef();
+
+  const handleClick = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} placeholder="Enter text" />
+      <button onClick={handleClick}>Focus Input</button>
+    </div>
+  );
+}
+
+export default InputFocus;
+```
+---
+
+## 🎯 Practical Usage of Refs
+
+- **Media Tags** (Play/Pause videos, audio)
+- **Form Handling** (Access input values directly)
+- **Animations** (Trigger animations on elements)
+
+---
+
+## ⚠️ Note
+
+- Avoid overusing **Refs**.
+- Prefer **state and props** whenever possible.
+- Use Refs only when direct DOM manipulation is required.
