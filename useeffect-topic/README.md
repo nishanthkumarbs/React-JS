@@ -1,16 +1,58 @@
-# React + Vite
+# UseEffect and Axios Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## UseEffect
 
-Currently, two official plugins are available:
+**UseEffect** is a Hook available in function-based components that allows you to control side effects in your React component.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### What are Side Effects?
+Side effects can include:
+- Fetching data
+- Updating something on the DOM
+- Setting timers
 
-## React Compiler
+### Syntax
+UseEffect takes two parameters:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```javascript
+useEffect(() => {
+  // Arrow Function - side effect logic here
+}, [dependency]); // Dependency Array
+```
 
-## Expanding the ESLint configuration
+### Parameters:
+1. **Arrow Function** - Contains the side effect logic to be executed
+2. **Dependency Array** - Controls when the effect runs (optional)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Axios
+
+**Axios** is used in React JS to fetch and manage data from the backend.
+
+### Axios Methods
+
+Axios provides 4 main HTTP methods:
+
+| Method | Purpose |
+|--------|---------|
+| **Get** | Fetch data from the backend |
+| **Post** | Insert/Create new data |
+| **Put** | Update existing data |
+| **Delete** | Remove data |
+
+### Example Usage:
+```javascript
+import axios from 'axios';
+
+// GET
+axios.get('/api/data');
+
+// POST
+axios.post('/api/data', { /* data */ });
+
+// PUT
+axios.put('/api/data/1', { /* updated data */ });
+
+// DELETE
+axios.delete('/api/data/1');
+```
